@@ -20,8 +20,8 @@ namespace RunningStatic
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((btnStatic.Location.X - e.X) > -50 && (btnStatic.Location.X - e.X) < 50)
-                || (btnStatic.Location.Y - e.Y) > -50 && (btnStatic.Location.Y - e.Y) < 50)
+            if (((btnStatic.Location.X - e.X) > -100 && (btnStatic.Location.X - e.X) < 100)
+                || (btnStatic.Location.Y - e.Y) > -100 && (btnStatic.Location.Y - e.Y) < 100)
             {
                 Random rnd = new Random();
                 btnStatic.Location = new Point(rnd.Next(this.Size.Width - 100), 
