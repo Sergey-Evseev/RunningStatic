@@ -29,8 +29,8 @@ namespace RunningStatic
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((btnStatic.Location.X - e.X) > -20 && (btnStatic.Location.X - e.X) < 20)
-                || (btnStatic.Location.Y - e.Y) > -20 && (btnStatic.Location.Y - e.Y) < 20)
+            if (((btnStatic.Location.X - e.X) > -60 && (btnStatic.Location.X - e.X) < 60)
+                || (btnStatic.Location.Y - e.Y) > -60 && (btnStatic.Location.Y - e.Y) < 60)
             {
                 Random rnd = new Random();
                 btnStatic.Location = new Point(rnd.Next(this.Size.Width - 20),
@@ -39,8 +39,7 @@ namespace RunningStatic
         }
 
         private void btnStatic_Click(object sender, EventArgs e)
-        {
-           // DialogResult result;
+        {           
             btnStatic.Visible = false;
 
             DialogResult result = MessageBox.Show($"You caught me! New game?", $"Success", 
