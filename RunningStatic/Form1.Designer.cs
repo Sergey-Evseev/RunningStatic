@@ -38,7 +38,7 @@
             this.btnStatic.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnStatic.Location = new System.Drawing.Point(347, 182);
             this.btnStatic.Name = "btnStatic";
-            this.btnStatic.Size = new System.Drawing.Size(100, 100);
+            this.btnStatic.Size = new System.Drawing.Size(80, 80);
             this.btnStatic.TabIndex = 0;
             this.btnStatic.Text = "Catch me!";
             this.btnStatic.UseVisualStyleBackColor = false;
