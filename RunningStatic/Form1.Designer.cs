@@ -42,6 +42,7 @@
             this.btnStatic.TabIndex = 0;
             this.btnStatic.Text = "Catch me!";
             this.btnStatic.UseVisualStyleBackColor = false;
+            this.btnStatic.Click += new System.EventHandler(this.btnStatic_Click);
             // 
             // Form1
             // 

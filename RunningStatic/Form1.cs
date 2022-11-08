@@ -21,18 +21,36 @@ namespace RunningStatic
         public Form1()
         {
             InitializeComponent();
-            this.MouseMove += Form1_MouseMove; 
+            this.MouseMove += Form1_MouseMove;            
+            btnStatic.Click += new EventHandler(btnStatic_Click);
+            //btnStatic.MouseClick += btnStatic_Click;
+            //btnStatic.MouseClick += new MouseEventHandler(btnStatic_Click);
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (((btnStatic.Location.X - e.X) > -100 && (btnStatic.Location.X - e.X) < 100)
-                || (btnStatic.Location.Y - e.Y) > -100 && (btnStatic.Location.Y - e.Y) < 100)
+            if (((btnStatic.Location.X - e.X) > -20 && (btnStatic.Location.X - e.X) < 20)
+                || (btnStatic.Location.Y - e.Y) > -20 && (btnStatic.Location.Y - e.Y) < 20)
             {
                 Random rnd = new Random();
-                btnStatic.Location = new Point(rnd.Next(this.Size.Width - 10), 
-                    rnd.Next(this.Size.Height - 10));
+                btnStatic.Location = new Point(rnd.Next(this.Size.Width - 20),
+                    rnd.Next(this.Size.Height - 20));
             }
+        }
+
+        private void btnStatic_Click(object sender, EventArgs e)
+        {
+           // DialogResult result;
+            btnStatic.Visible = false;
+
+            DialogResult result = MessageBox.Show($"You caught me! New game?", $"Success", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                btnStatic.Visible = true;
+                if (result == DialogResult.No) this.Close();
+            }            
         }
     }
 }
